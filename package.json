@@ -1,5 +1,19 @@
 {
   "dependencies": {
     "typescript": "^5.1.6"
+  },
+  "name": "learning-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vikram segta",
+  "license": "ISC",
+  "description": "learn ts",
+  "repository": {
+    "type": "git",
+    "url": "learning-typescript"
   }
 }
