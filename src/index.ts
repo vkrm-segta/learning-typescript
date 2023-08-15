@@ -16,6 +16,27 @@
 // Instance types
 // ----------------------------------------------------------------
 
-let regExp: RegExp = new RegExp('abcdefghijklmnopqrstuvwxyzABCDEF');
-let array: Array<number> = [1, 2, 3];
-let set: Set<number> = new Set([1, 2, 1, 3]);
+//   let regExp: RegExp = new RegExp('abcdefghijklmnopqrstuvwxyzABCDEF');
+//   let array: Array<number> = [1, 2, 3];
+//   let set: Set<number> = new Set([1, 2, 1, 3]);
+
+// ----------------------------------------------------------------
+// Arrray and tuple
+// ----------------------------------------------------------------
+
+// Array
+let array: number[] = [1, 2, 3];
+
+// Usage
+array = [1];
+array = [1, 2, 3, 4, 5];
+array = ['hello'] // Error😡
+
+// Tuple
+let tuple: [number, number] = [0,0]
+
+// Usage
+tuple = [1,2]
+tuple = [1] // Error😡: must be two items
+tuple = [1,2,3] // Error😡: must be two items only
+tuple = ['hello', 5] // Error😡: must number
