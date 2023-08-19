@@ -87,26 +87,42 @@
 // Special type Any and Unknown
 //----------------------------------------------------------------
 
-let exampleAny: any;
-let exampleUnknown: unknown;
+//   let exampleAny: any;
+//   let exampleUnknown: unknown;
 
-// Any
-exampleAny = 123;
-exampleAny = 'Hello';
+//   Any
+//   exampleAny = 123;
+//   exampleAny = 'Hello';
 
-// Unknown
-exampleUnknown = 123;
-exampleUnknown = 'Hello';
+//   Unknown
+//   exampleUnknown = 123;
+//   exampleUnknown = 'Hello';
 
-// any
-exampleAny.allow.anything.you.can.imagine();
-let anySetBoolean: boolean = exampleAny;
+//   any
+//   exampleAny.allow.anything.you.can.imagine();
+//   let anySetBoolean: boolean = exampleAny;
 
-// Unknown
-if (typeof exampleUnknown === 'string') {
-  exampleUnknown.trim();
-}
+//   Unknown
+//   if (typeof exampleUnknown === 'string') {
+//     exampleUnknown.trim();
+//   }
 
-if (typeof exampleUnknown === 'boolean') {
-  let unknownSetBoolean: boolean = exampleUnknown;
-}
+//   if (typeof exampleUnknown === 'boolean') {
+//     let unknownSetBoolean: boolean = exampleUnknown;
+//   }
+
+//----------------------------------------------------------------
+// Jvascript to TypeScript
+//----------------------------------------------------------------
+
+  // By default if we don't assign any type to variables then it will be [:any] type in typescript.
+  let someLagacyCode;
+  
+  someLagacyCode = toString();
+  console.log(someLagacyCode.trim());
+  
+  // So instead of [:any] we can assign these variables [:unknown] type to avoid run time error
+  
+  if (typeof someLagacyCode == 'string') {
+    console.log(someLagacyCode.trim());
+  }
