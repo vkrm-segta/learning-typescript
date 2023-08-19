@@ -78,7 +78,7 @@
 //   function add(x: number, y: number): number {
 //     return x + y;
 //   }
-  
+
 //   function log(message: string): void { // function with nothing to return
 //     console.log(message);
 //   }
@@ -90,3 +90,23 @@
 let exampleAny: any;
 let exampleUnknown: unknown;
 
+// Any
+exampleAny = 123;
+exampleAny = 'Hello';
+
+// Unknown
+exampleUnknown = 123;
+exampleUnknown = 'Hello';
+
+// any
+exampleAny.allow.anything.you.can.imagine();
+let anySetBoolean: boolean = exampleAny;
+
+// Unknown
+if (typeof exampleUnknown === 'string') {
+  exampleUnknown.trim();
+}
+
+if (typeof exampleUnknown === 'boolean') {
+  let unknownSetBoolean: boolean = exampleUnknown;
+}
