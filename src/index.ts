@@ -47,26 +47,38 @@
 // Object type and Type aliases
 // ----------------------------------------------------------------
 
-type ObjectType = { x: number; y: number };
+//   type ObjectType = { x: number; y: number };
+//
+//   Before Type aliases
+//   let center: { x: number; y: number } = {
+//   x: 0,
+//   y: 0,
+//   };
 
-// Before Type aliases
-let center: { x: number; y: number } = {
-  x: 0,
-  y: 0,
-};
+//   let unit: { x: number; y: number } = {
+//   x: 2,
+//   y: 2,
+//   };
 
-let unit: { x: number; y: number } = {
-  x: 2,
-  y: 2,
-};
+//   After Type aliases
+//   let center1: ObjectType = {
+//   x: 0,
+//   y: 0,
+//   };
 
-// After Type aliases
-let center1: ObjectType = {
-  x: 0,
-  y: 0,
-};
+//   let unit1: ObjectType = {
+//   x: 2,
+//   y: 2,
+//   };
 
-let unit1: ObjectType = {
-  x: 2,
-  y: 2,
-};
+//----------------------------------------------------------------
+// Function
+//----------------------------------------------------------------
+
+function add(x: number, y: number): number {
+  return x + y;
+}
+
+function log(message: string): void { // function with nothing to return
+  console.log(message);
+}
