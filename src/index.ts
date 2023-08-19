@@ -75,10 +75,18 @@
 // Function
 //----------------------------------------------------------------
 
-function add(x: number, y: number): number {
-  return x + y;
-}
+//   function add(x: number, y: number): number {
+//     return x + y;
+//   }
+  
+//   function log(message: string): void { // function with nothing to return
+//     console.log(message);
+//   }
 
-function log(message: string): void { // function with nothing to return
-  console.log(message);
-}
+//----------------------------------------------------------------
+// Special type Any and Unknown
+//----------------------------------------------------------------
+
+let exampleAny: any;
+let exampleUnknown: unknown;
+
