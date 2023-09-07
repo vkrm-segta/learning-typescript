@@ -112,17 +112,31 @@
 //   }
 
 //----------------------------------------------------------------
-// Jvascript to TypeScript
+// Type Casting
 //----------------------------------------------------------------
 
   // By default if we don't assign any type to variables then it will be [:any] type in typescript.
-  let someLagacyCode;
+  // let someLagacyCode;
   
-  someLagacyCode = toString();
-  console.log(someLagacyCode.trim());
+  // someLagacyCode = toString();
+  // console.log(someLagacyCode.trim());
   
   // So instead of [:any] we can assign these variables [:unknown] type to avoid run time error
   
-  if (typeof someLagacyCode == 'string') {
-    console.log(someLagacyCode.trim());
-  }
+  // if (typeof someLagacyCode == 'string') {
+  //   console.log(someLagacyCode.trim());
+  // }
+
+// --------------------------------------------------------------
+// Type Declarations
+// --------------------------------------------------------------
+
+console.log('user logged in', process.env.USER)
+
+// 1). declare const process: any
+// 2). best way to handle the error is to install npm i @types/node
+
+import express from 'express'; // it through error 
+
+// To handle this error we need to install npm i @types/express because if the 
+// package is not written in typescript then we have to install its type
