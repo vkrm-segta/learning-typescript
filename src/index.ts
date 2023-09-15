@@ -140,3 +140,18 @@ import express from 'express'; // it through error
 
 // To handle this error we need to install npm i @types/express because if the 
 // package is not written in typescript then we have to install its type
+
+// --------------------------------------------------------------
+// Null versus undefined
+// --------------------------------------------------------------
+
+function decoration(value: string | undefined | null) {
+  //return value.trim() 
+  // it through this error "value' is possibly 'null' or 'undefined"
+  if (value == null) { // We have to use "==" instead of "==="
+    return
+  }
+  return value.trim() 
+}
+
+decoration("Hello")
