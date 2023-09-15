@@ -115,43 +115,82 @@
 // Type Casting
 //----------------------------------------------------------------
 
-  // By default if we don't assign any type to variables then it will be [:any] type in typescript.
-  // let someLagacyCode;
-  
-  // someLagacyCode = toString();
-  // console.log(someLagacyCode.trim());
-  
-  // So instead of [:any] we can assign these variables [:unknown] type to avoid run time error
-  
-  // if (typeof someLagacyCode == 'string') {
-  //   console.log(someLagacyCode.trim());
-  // }
+// By default if we don't assign any type to variables then it will be [:any] type in typescript.
+// let someLagacyCode;
+
+// someLagacyCode = toString();
+// console.log(someLagacyCode.trim());
+
+// So instead of [:any] we can assign these variables [:unknown] type to avoid run time error
+
+// if (typeof someLagacyCode == 'string') {
+//   console.log(someLagacyCode.trim());
+// }
 
 // --------------------------------------------------------------
 // Type Declarations
 // --------------------------------------------------------------
 
-console.log('user logged in', process.env.USER)
+// console.log('user logged in', process.env.USER)
 
 // 1). declare const process: any
 // 2). best way to handle the error is to install npm i @types/node
 
-import express from 'express'; // it through error 
+// import express from 'express'; // it through error
 
-// To handle this error we need to install npm i @types/express because if the 
+// To handle this error we need to install npm i @types/express because if the
 // package is not written in typescript then we have to install its type
 
 // --------------------------------------------------------------
 // Null versus undefined
 // --------------------------------------------------------------
 
-function decoration(value: string | undefined | null) {
-  //return value.trim() 
-  // it through this error "value' is possibly 'null' or 'undefined"
-  if (value == null) { // We have to use "==" instead of "==="
-    return
-  }
-  return value.trim() 
+// function decoration(value: string | undefined | null) {
+//   //return value.trim()
+//   // it through this error "value' is possibly 'null' or 'undefined"
+//   if (value == null) { // We have to use "==" instead of "==="
+//     return
+//   }
+//   return value.trim()
+// }
+
+// decoration("Hello")
+
+// --------------------------------------------------------------
+// Type intersection
+// --------------------------------------------------------------
+
+type twoD = {
+  x: number;
+  y: number;
+};
+// Instead of using this we can also use it as follows 2) :
+// First Example
+
+// 1).
+// type threeD = {
+//   x: number,
+//   y: number,
+//   z: number
+// }
+
+// 2).
+type threeD = twoD & {
+  z: number;
+};
+
+// Second Example
+
+type Person = {
+  name: string
 }
 
-decoration("Hello")
+type Email = {
+  email: string
+}
+
+type Phone = {
+  phone: number
+}
+
+type allDetails = Person & Email & Phone
