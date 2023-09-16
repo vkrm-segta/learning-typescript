@@ -190,7 +190,7 @@ type Email = {
 }
 
 type Phone = {
-  phone: number
+  phone?: number // this is a optional parameter
 }
 
 type allDetails = Person & Email & Phone
